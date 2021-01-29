@@ -15,14 +15,14 @@ class CreateUserAddressesTable extends Migration
     {
         Schema::create('user_domicilios', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id')->unsigned();
+            $table->integer('user_id');
             $table->string('domicilio');
             $table->string('numero_exterior');
             $table->string('colonia');
             $table->string('cp');
             $table->string('ciudad');
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users');
+            // $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
